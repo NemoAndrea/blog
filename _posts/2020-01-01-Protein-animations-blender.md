@@ -37,3 +37,10 @@ Basic navigation: the numberpad will allow for basic viewing angles (x,y,z, came
 ## Animating the scene
 
 
+## Scripting
+
+You can do python scripting straight from blender. It should also be possible to link to external files, but this was giving me a bit of trouble so I just did everything in the same file. To allow your python script to interface with blender you just have to add 'import bpy' to your imports.
+
+There are two consoles in blender. One is part of a subwindow just like all objects in blender, and one is the 'main' console. Print statements get displayed in the latter, so that one is the most useful. You open it by [window] -> [toggle system console] in the top left of blender. 
+
+
