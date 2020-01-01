@@ -13,7 +13,7 @@ Since I like molecular biology, I figured I should try to import protein structu
 [RSCB Protein DataBase](https://www.rcsb.org/) (PDB for short). With the recent new version of blender (2.8) 
 rendering can now be done in realtime, which is a huge boost to user friendlyness and ease of operation. Luckily, I had this [blog post by Damien Farrell](https://dmnfarrell.github.io/bioinformatics/proteins-blender) to serve as a starting point.
 
-## Importing into blender
+## Preparing for blender
 
 To get started, we first need to go from a nice structure in PDB to something we can play around with in blender. 
 As Damien Farrell mentions, [PyMOL](https://pymol.org/2/) will work fine for doing this. For some reason it keeps
@@ -30,3 +30,16 @@ Some specific things to look out for:
 
 Once you have the surface rendering open in either program you will want to export them.
 For Chimera got to [file] -> [export scene] -> save as .x3D file. For PyMOL go to  [file] -> [export as] -> save as vrml 2.
+
+## Importing to blender
+
+In blender, you open up a new scene, and then go to [file] -> [import] -> [X3D extensible 3D (.x3D/.wrl)] and select the file you exported in the previous step. 
+
+---
+**Important!** For some reason Blender 2.81 (latest version as of writing this) no longer lists this option in the import options. Therefore you should also have Blender 2.80 installed, which does have this option. If you import and then save the blender file, you can open this file up in 2.81 no problem. 
+
+---
+
+Now you can simply sit back and wait for blender to load the surface. Depending on the model, this may take a while. I recall one particularly large structure taking about 10 minutes on my device. Once it's loaded, save the file. Now you are good to go! Now that you have the surface in a blender file, opening times will be much faster and you start working blender magic. 
+
+If you want multiple structures in the same blender file, you can simply do this process for your different proteins, and ctrl-c ctrl-v one structure from one file to the other (if you have both open in different windows). Depending on the size this may take a few seconds to do.
