@@ -4,7 +4,7 @@ title: Microtuble parody animation
 ---
 
 This post will cover some behind the scences stuff of an animation I rendered in Blender that parodied the ad for the original
-microsoft surfacebook. Watch it [here](). 
+microsoft surfacebook. Watch it [here](https://youtu.be/JBYRBbjj3Kk). 
 
 ## Building a microtubule
 
