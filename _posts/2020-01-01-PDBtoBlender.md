@@ -27,6 +27,7 @@ So, once the structure is open in either chimera or PyMOL, youll start working o
 Some specific things to look out for:
 * In chimera, large structures will often fail or only partially work when you try to load a surface rendering. Splitting the individual chains (type 'split' in command line) will help a bit in this regard. For large structures I go to PyMOL, which seems to not have this problem.
 * In my experience, PyMOL seems to produce models that have more vertices than chimera, even though they look equally detailed in blender. I'm sure this could be fixed, but If I can help it I therefore import from chimera
+* you can improve the surface rendering quality by the following commands: [ PyMol ] "set surface_quality, {val}" (1 is high detail) [ Chimera ] "setattr s density {val}" (default is 2). Increasing these beyond the default is a good idea for smaller structures.
 
 Once you have the surface rendering open in either program you will want to export them.
 For Chimera got to [file] -> [export scene] -> save as .x3D file. For PyMOL go to  [file] -> [export as] -> save as vrml 2.
