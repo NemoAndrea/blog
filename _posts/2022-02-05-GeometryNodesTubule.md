@@ -35,9 +35,11 @@ Finally we add the dimer model and the hydrolysis model. We add an area for easy
 
 ## Demo videos
 
-*GTP Hydrolysis*
+*Spline Manipulation*
 
-<img src="../assets/geometry_tubule_hydrolysis.gif" alt="geometry_tubule_hydrolysis" width=50% />
+![geometry_tubule_movement_demo](../assets/geometry_tubule_movement_demo.webp)
+
+*GTP Hydrolysis*
 
 ![geometry_tubule_hydrolysis](../assets/geometry_tubule_hydrolysis.gif)
 
