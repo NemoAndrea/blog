@@ -7,11 +7,39 @@ title: Blender Geometry Nodes Microtubule (3.1 & 3.0)
 
 Blender has recently overhauled its fantastic `Geometry Nodes` system with the release of blender 3.0. As a microtubule enthusiast, I figured it was a perfect chance to make a procedural microtubule generator.
 
+All you need to know is covered in the showcase video.
+
 <link>
 
 ## Nodes setup at a glance
 
-## Features at a glance
+The easiest way to have a look at the nodes is to simply download the asset file or watch the showcase video. Alternatively, you can get the general gist of it from the images below.
+
+![geometry_tubule_nodes_overview_1](../assets/geometry_tubule_nodes_overview_1.jpg)
+
+We start by sampling the backbone in higher resolution, and capturing some attributes for later use.
+
+![geometry_tubule_nodes_backbone](../assets/geometry_tubule_nodes_backbone.jpg)
+
+We then add the 'flared' tip of the microtubule. Keep in mind that at this point the splines are all overlapping (no tube yet).
+
+![geometry_tubule_nodes_tip](../assets/geometry_tubule_nodes_tip.jpg)
+
+We then rotate and twist these splines around the backbone to make the hollow tube geometry
+
+![geometry_tubule_nodes_lattice](../assets/geometry_tubule_nodes_lattice.jpg)
+
+Finally we add the dimer model and the hydrolysis model. We add an area for easy custom modification of the model ("maps & more").
+
+![geometry_tubule_nodes_details](../assets/geometry_tubule_nodes_details.jpg)
+
+## Demo videos
+
+*GTP Hydrolysis*
+
+<img src="../assets/geometry_tubule_hydrolysis.gif" alt="geometry_tubule_hydrolysis" width=50% />
+
+![geometry_tubule_hydrolysis](../assets/geometry_tubule_hydrolysis.gif)
 
 ## Download 
 
@@ -20,20 +48,13 @@ The geometry nodes setup and some tubulin models are available as an `asset` fil
 **Download and Use instructions**
 
 1. Download the microtubule asset file (`.blend`). [from this onedrive link](https://1drv.ms/u/s!Agocf5W6i-Ewtkr4N52cFZC2M36l?e=Axhwwl) and save it to whatever (stable) location you like. Consider making a separate directory where you save all your blender assets for convenience. Best to save it in its own directory.
-
-2. Open a new file in blender, and go to `edit` > `preferences` > `file paths ` > `asset libraries` and add the location you stored the asset file in to the list.
-
+2. Open a new file in blender, and go to `edit` > `preferences` > `file paths ` > `asset libraries` and add the location you stored the asset file in to the list. You only need to do this once.
 3. Drag in a new `area` (see [the official blender docs for info](https://docs.blender.org/manual/en/latest/interface/window_system/areas.html))
-
 4. Change its type to `Asset Browser`
-
 5. From the `Asset Browser`, select the asset file you downloaded (you will have given it a name in step **2**) 
-
 6. Now just drag and drop into your scene! 
+   *To get multiple microtubules, you should duplicate (`shift`+`d`) the first microtubule you added to the scene, **rather than dragging in it again from the asset library**. The latter will create completely 'independent' copies, which is probably not what you want.*
 
-   > To get multiple microtubules, you should duplicate (`shift`+`d`) the first microtubule you added to the scene, **rather than dragging in it again from the asset library**. The latter will create completely 'independent' copies, which is probably not what you want.
-
-> **Step 2** you only need to do once. Whenever you make a new file you can always find the assets via the asset library
 
 ![asset_browser](../assets/asset_browser.PNG)
 
