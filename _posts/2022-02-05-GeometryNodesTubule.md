@@ -3,8 +3,6 @@ layout: post
 title: Blender Geometry Nodes Microtubule (3.1 & 3.0)
 ---
 
-## Geometry Nodes Microtubule
-
 Blender has recently overhauled its fantastic `Geometry Nodes` system with the release of blender 3.0. As a microtubule enthusiast, I figured it was a perfect chance to make a procedural microtubule generator.
 
 All you need to know is covered in the showcase video.
@@ -29,7 +27,7 @@ We then rotate and twist these splines around the backbone to make the hollow tu
 
 ![geometry_tubule_nodes_lattice](../assets/geometry_tubule_nodes_lattice.jpg)
 
-Finally we add the dimer model and the hydrolysis model. We add an area for easy custom modification of the model ("maps & more").
+Finally we add the dimer model and the hydrolysis model. An area is left open for easy custom modification of the model ("maps & more").
 
 ![geometry_tubule_nodes_details](../assets/geometry_tubule_nodes_details.jpg)
 
@@ -38,6 +36,14 @@ Finally we add the dimer model and the hydrolysis model. We add an area for easy
 *Spline Manipulation*
 
 ![geometry_tubule_movement_demo](../assets/geometry_tubule_movement_demo.webp)
+
+*Procedural Microtubule lattice*
+
+![geometry_tubule_lattice](../assets/geometry_tubule_lattice.webp)
+
+*Procedural Microtubule tip*
+
+![geometry_tubule_tip](../assets/geometry_tubule_tip.webp)
 
 *GTP Hydrolysis*
 
@@ -57,7 +63,9 @@ The geometry nodes setup and some tubulin models are available as an `asset` fil
 6. Now just drag and drop into your scene! 
    *To get multiple microtubules, you should duplicate (`shift`+`d`) the first microtubule you added to the scene, **rather than dragging in it again from the asset library**. The latter will create completely 'independent' copies, which is probably not what you want.*
 
-
 ![asset_browser](../assets/asset_browser.PNG)
 
+### Changelog
+
+* **V1.2** More robust tip dimer orientation.
 
