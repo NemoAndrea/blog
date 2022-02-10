@@ -5,9 +5,11 @@ title: Blender Geometry Nodes Microtubule (3.1 & 3.0)
 
 Blender has recently overhauled its fantastic `Geometry Nodes` system with the release of blender 3.0. As a microtubule enthusiast, I figured it was a perfect chance to make a procedural microtubule generator.
 
+![thumbnail](../assets/thumbnail.png)
+
 All you need to know is covered in the showcase video.
 
-<link>
+[Youtube: Procedural Microtubule | Blender 3.1 Geometry Nodes](https://youtu.be/AYUyAFqJXMk)
 
 ## Nodes setup at a glance
 
