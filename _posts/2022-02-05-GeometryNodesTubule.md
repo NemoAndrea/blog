@@ -9,7 +9,7 @@ Blender has recently overhauled its fantastic `Geometry Nodes` system with the r
 
 All you need to know is covered in the showcase video.
 
-[Youtube: Procedural Microtubule | Blender 3.1 Geometry Nodes](https://youtu.be/AYUyAFqJXMk)
+[Procedural Microtubule Blender 3.1 Geometry Nodes](https://youtu.be/AYUyAFqJXMk)
 
 ## Nodes setup at a glance
 
