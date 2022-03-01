@@ -71,4 +71,5 @@ The geometry nodes setup and some tubulin models are available as an `asset` fil
 ### Changelog
 
 * **V1.2** More robust tip dimer orientation.
+* **V1.3** Added Bacterial Microtubule model (BtubAB)
 
