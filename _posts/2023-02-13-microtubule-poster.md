@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Microtubule Poster
+title: Microtubule Posters 🖼️
 ---
-
-# Microtubule Aesthetic Posters 🖼️
 
 Recently I came across this very interesting blender geometry node set by Alan Wyatt called the [traditionalist toolbag](https://tradigital.gumroad.com/l/NjfQc?layout=profile). The full version is paid, but Alan provides [a nice user manual video](https://www.youtube.com/watch?v=KfaCCGJzj1g) and [an explainer video](https://www.youtube.com/watch?v=6uaJ0L4E390&t=3s) that you could use to implement a basic version yourself for free.
 
