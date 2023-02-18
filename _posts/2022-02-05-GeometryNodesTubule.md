@@ -58,7 +58,7 @@ The geometry nodes setup and some tubulin models are available as an `asset` fil
 **Download and Use instructions**
 
 1. Make sure you have **Blender 3.1** installed. This is (at the time of writing) still in beta.
-2. Download the microtubule asset file (`.blend`). [from this onedrive link](https://1drv.ms/u/s!Agocf5W6i-Ewtkr4N52cFZC2M36l?e=Axhwwl) and save it to whatever (stable) location you like. Consider making a separate directory where you save all your blender assets for convenience. Best to save it in its own directory.
+2. Download the microtubule asset file (`.blend`). [from gumroad](https://nemoandrea.gumroad.com/l/blender-cytoskeleton) and save it to whatever (stable) location you like. Consider making a separate directory where you save all your blender assets for convenience. Best to save it in its own directory.
 3. Open a new file in blender, and go to `edit` > `preferences` > `file paths ` > `asset libraries` and add the location you stored the asset file in to the list. You only need to do this once.
 4. Drag in a new `area` (see [the official blender docs for info](https://docs.blender.org/manual/en/latest/interface/window_system/areas.html))
 5. Change its type to `Asset Browser`

@@ -5,7 +5,7 @@ title: Microtubule Posters 🖼️
 
 Recently I came across this very interesting blender geometry node set by Alan Wyatt called the [traditionalist toolbag](https://tradigital.gumroad.com/l/NjfQc?layout=profile). The full version is paid, but Alan provides [a nice user manual video](https://www.youtube.com/watch?v=KfaCCGJzj1g) and [an explainer video](https://www.youtube.com/watch?v=6uaJ0L4E390&t=3s) that you could use to implement a basic version yourself for free.
 
-I decided to pick it up and **combine** it with my procedural microtubule (and other cytoskeletal filaments) generator. For more information about that asset set, you can [check out my blog post on it](2022-02-05-GeometryNodesTubule.md) — with a link t/o the asset files available for free 😉. 
+I decided to pick it up and **combine** it with my procedural microtubule (and other cytoskeletal filaments) generator. For more information about that asset set, you can [check out my blog post on it](https://nemoandrea.github.io/blog/GeometryNodesTubule/) — with a link t/o the asset files available for free 😉. 
 
 ![cover image](../assets/microtubule-poster/cover.jpg)
 
