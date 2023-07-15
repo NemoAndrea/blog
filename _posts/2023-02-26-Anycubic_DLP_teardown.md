@@ -63,7 +63,7 @@ You will need to have the following 3 connectors:
 2. I2C connector
 3. FPC connector for image data (0.3mm pitch, 51 pin) - [example](https://www.digikey.nl/nl/products/detail/hirose-electric-co-ltd/FH35C-51S-0-3SHW-99/4866468)
 
-The 12V connector has 4 pins, two for the `+12V` and two for `GND`. Can't really imagine a single cable wouldn't have been enough for the device, but probably doesn't hurt. As far as I can tell it's a standard JST PH 4-pin 2mm connector. Orientation can be seen from images above. On the mainboard there is a 100uF capacitor to serve as (what I assume to be) some supply voltage smoothing.
+The 12V connector has 4 pins, two for the `+12V` and two for `GND`. Can't really imagine a single cable wouldn't have been enough for the device, but probably doesn't hurt. As far as I can tell it's a standard JST PH 4-pin 2mm connector. Orientation can be seen from images above. On the mainboard there is a 100uF capacitor to serve as (what I assume to be) some supply voltage smoothing.  For some insane reason the red wires are `GND`, and the black ones are `+12V`.
 
 The I2C connector is a bit strange. It is a 4-pin connector on the eViewTek board side, but 3-pin on the mainboard. It seems like one of the pins is `GND`, the other two are `3.3V`. I have not been able to confirm what the bus frequency is. On the eViewTek board they get level translated by a `TXS0102` to something like `1.8V`.  Unfortunately the level shifter hides the `SCl` and `SDA` traces so I am not 100% sure if SDA/SCL should be swapped atm.
 
