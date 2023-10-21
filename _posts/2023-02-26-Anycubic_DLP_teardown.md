@@ -17,7 +17,7 @@ Unscrewing the optical engine by its four 2mm hex bolts we get a clearer picture
 
 ![](../assets/photon-ultra/optical_engine.jpg)
 
-The unit itself is pretty compact, measureing about 10cm along its longest axis. It can be translated along the optical axis with a basic screw in the back and the projection lenses seem to have some adjustment too, probably to change the focal point of the optic, which should of course coincide with the bottom of the resin vat in the 3D printer. The top panel covering the optics has a thick layer of opaque glue, which probably serves to prevent any UV light leak.
+The unit itself is pretty compact, measuring about 10cm along its longest axis. It can be translated along the optical axis with a basic screw in the back and the projection lenses seem to have some adjustment too, probably to change the focal point of the optic, which should of course coincide with the bottom of the resin vat in the 3D printer. The top panel covering the optics has a thick layer of opaque glue, which probably serves to prevent any UV light leak.
 
 ![](../assets/photon-ultra/proejctor_size.JPG)
 
@@ -55,7 +55,9 @@ The one pin that I am not sure of is one that is *almost certainly* one of the `
 
 ### Controlling the eViewTek board
 
-If you want to control the board yourself with your own IC and PCB, you could follow some of the notes below. I will be working on this for the `openMLA` project.
+If you want to control the board yourself with your own IC and PCB, you could follow some of the notes below. I will be working on this for the [openMLA project](https://github.com/openMLA/). There are two approaches:
+
+**Approach 1: parallel video interface**
 
 You will need to have the following 3 connectors:
 
@@ -63,13 +65,36 @@ You will need to have the following 3 connectors:
 2. I2C connector
 3. FPC connector for image data (0.3mm pitch, 51 pin) - [example](https://www.digikey.nl/nl/products/detail/hirose-electric-co-ltd/FH35C-51S-0-3SHW-99/4866468)
 
-The 12V connector has 4 pins, two for the `+12V` and two for `GND`. Can't really imagine a single cable wouldn't have been enough for the device, but probably doesn't hurt. As far as I can tell it's a standard JST PH 4-pin 2mm connector. Orientation can be seen from images above. On the mainboard there is a 100uF capacitor to serve as (what I assume to be) some supply voltage smoothing.  For some insane reason the red wires are `GND`, and the black ones are `+12V`.
+The 12V connector has 4 pins, two for the `+12V` and two for `GND`. Can't really imagine a single cable wouldn't have been enough for the device, but probably doesn't hurt. As far as I can tell it's a standard JST PH 4-pin 2mm connector. Orientation can be seen from images above. On the mainboard there is a 100uF capacitor to serve as (what I assume to be) some supply voltage smoothing.  **For some insane reason the red wires are `GND`, and the black ones are `+12V`**.
 
 The I2C connector is a bit strange. It is a 4-pin connector on the eViewTek board side, but 3-pin on the mainboard. It seems like one of the pins is `GND`, the other two are `3.3V`. I have not been able to confirm what the bus frequency is. On the eViewTek board they get level translated by a `TXS0102` to something like `1.8V`.  Unfortunately the level shifter hides the `SCl` and `SDA` traces so I am not 100% sure if SDA/SCL should be swapped atm.
 
 The layout of the 51-pin FPC connector can be reviewed in the section above. The mainboard has a Vsync signal at a frequency of 67.5 Hz, which seems a bit excessive for 3D printing. The Hsync rise signal has a period of 20us (50KHz). That would put a lower bound on PCLK of 50*1240 = 62MHz. The measured value is 62.2-62.5MHz, so that checks out.
 
 ![](../assets/photon-ultra/connectors.jpg)
+
+**Approach 2: SPI+ I2C communication**
+
+> It was pointed out to me that it is also possible to send the video (and some other commands) through an SPI interface to the DLPC1438. The DLPC1438 has an on-board FPGA which then interprets the video data sent over SPI and will expose that with the right timing to the rest of the system. 
+
+An alternative approach which is more flexible on the implementation side (requiring only I2C and SPI on your controller) is approach 2, where we do not have to implement the parallel interface or deal with the fiendish 51-pin connector (for the most part).
+
+You will need to have the following 3 connectors:
+
+1. 12V power supply cable (2mm pitch, 4 pin)
+2. I2C connector
+3. Connector that ends up a [JST SH](https://www.jst.co.uk/productSeries.php?pid=93&cat=30) 6-pin male connector
+
+For point (1) and (2), see the previous section. For point (3), note that this cable plugs into the connector on the left side of the board in the board image above labelled 'FLASH'. The pinout of the connector (top to bottom, based on main board image):
+
+* CSZ0
+* MOSI 
+* MISO
+* (S)CLK
+* GND
+* +3.3V
+
+This then connects to SPI0 lanes of the DLPC1438. If more information is uncovered I will add it here or add it to the [controller board that I am working on](https://github.com/openMLA/photon-ultra-controller/).
 
 ### Miscellaneous
 
