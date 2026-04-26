@@ -3,11 +3,9 @@ layout: post
 title: Designing Risographs in Inkscape
 ---
 
-## Background
+I've recently gotten rather interested in a printing process referred to as [Risographs](https://www.commarts.com/columns/the-rise-of-riso). A risograph machine uses a (machine generated) stencil that is wrapped around an ink drum. With this, patterns of a single hue can be quickly and economically applied to paper. Multiple colours require multiple passes through the machine, and consequently introduce registration errors. The main reason to use these for art is either (1) economics for high volume printing or (2) ability to use unique inks (fluorescent, metallic). 
 
-I've recently gotten rather interested in a printing process referred to as [Risographs](https://www.commarts.com/columns/the-rise-of-riso). A risograph machine uses a (machine generated) stencil that is wrapped around an ink drum. With this, patterns of a single hue can be quickly and economically applied to paper. Multiple colours require multiple passes through the machine, and consequently introduce registration errors. The main reason to use these for art is either (1) economics for high volume printing or (2) ability to use unique inks (fluorescent, metallic). For designs with more than 3 distinct hues (excluding colours that can be made by blending) or ones that do not require special ink types, it may be better (and cheaper sometimes) to stick to an inkjet process or similar.
-
-> It should be mentioned that Risograph is just a brand name of the Riso Kagaku Corporation, but nowadays it has become a bit of a catch-all for art that is created with a 'stencil duplicator' - irrespective of whether it was actually made using a Risograph machine. 
+For designs with more than 3 distinct hues (excluding colours that can be made by blending) or ones that do not require special ink types, it may be better (and cheaper sometimes) to stick to an inkjet process or similar. It should be mentioned that Risograph is just a brand name of the Riso Kagaku Corporation, but nowadays it has become a bit of a catch-all for art that is created with a 'stencil duplicator' - irrespective of whether it was actually made using a Risograph machine._
 
 ## What elements of Risograph printing do we need to capture?
 
@@ -24,20 +22,6 @@ If you want to read a little bit more about the peculiarities of the medium and 
 ## Setting up Inkscape for Risographs
 
 The general structure splits each colour onto a separate layer, and all items within a layer are **pure grayscale** objects. The latter is important, because it makes exporting the file for the Riso machine trivial. It also means you do not need to worry about switching between colours, as all items in the graphic are pure grayscale. The colour is set only once per layer, and is applied as an Inkscape filter.
-
-```txt
-[Layer N] -- filter(apply-my-colour(colorN))  --blend-mode=multiply
-    <g>...</g>    
-...
-[Layer 2] -- filter(apply-my-colour(color2))  --blend-mode=multiply
-    <g><text>Cool Text</text></g>
-    ...
-[Layer 1] -- filter(apply-my-colour(color1))  --blend-mode=multiply
-    <g><rect></rect></g>
-    ...
-[Background]  
-    <rect fill="background-color"></rect>
-```
 
 If we do that for a simple two-colour case, we get the following:
 
@@ -65,9 +49,7 @@ As a check, we can activate the 'no filter' display mode in Inkscape. We should 
 
 ![](../assets/20250303-riso/nofilter.png)
 
-> [!warning] Warning: make sure that all content is truly grayscale!
-> There is nothing preventing you from selecting non-grayscale fills and strokes for content in each colour layer. Non-grayscae colours
-> will still be mapped to something close to the target colour, but there is no predicting how that would end up being interpreted later on. Keep an eye on it, or at least check during export.
+⚠️ Warning: make sure that all content is truly grayscale! There is nothing preventing you from selecting non-grayscale fills and strokes for content in each colour layer. Non-grayscae colours will still be mapped to something close to the target colour, but there is no predicting how that would end up being interpreted later on. Keep an eye on it, or at least check during export.
 
 You can check your setup against [the example file that I have been using in this post](../assets/20250303-riso/riso-template.svg)
 
@@ -79,11 +61,11 @@ To do this, simply duplicate the page for each colour, and create a clone of the
 
 ![](../assets/20250303-riso/grayscale-preview.png)
 
-> [!tip] Tip: to align the grayscale clone on the duplicate page, you can (if the design fits within the page) just copy the coordinates of the group in the color design. If it does not fit within the page, a temporary dummy item in the corner of the page will aid alignment.
+💡 Tip: to align the grayscale clone on the duplicate page, you can (if the design fits within the page) just copy the coordinates of the group in the color design. If it does not fit within the page, a temporary dummy item in the corner of the page will aid alignment.
 
-> [!tip] Tip: you can also scale clones, allowing you to create different print sizes for your design (e.g. A4 or A3 Riso)
+💡 Tip: you can also scale clones, allowing you to create different print sizes for your design (e.g. A4 or A3 Riso)
 
-> [!warning] Warning: Inkscape's selection is nontrivial. In case of issues, make sure you are truly working within a group and that you have the right item selected (also when applying filters).
+⚠️ Warning: Inkscape's selection is nontrivial. In case of issues, make sure you are truly working within a group and that you have the right item selected (also when applying filters).
 
 ## Other points
 
