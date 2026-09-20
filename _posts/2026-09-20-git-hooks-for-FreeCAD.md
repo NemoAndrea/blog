@@ -197,15 +197,8 @@ I will update the hooks to reflect that.
 
 Have a look at the [source repository](https://codeberg.org/NemoAndrea/pre-commit-hooks-for-FreeCAD) for usage instructions. 
 
-[^1]: It just 
-means that systems with FreeCAD installed will not show that preview thumbnail
-for the file if they have their file explorer set to pictogram mode. I think
-this is not an issue, as they can look at the README or at preview.jpg anyway.
+[^1]: It just means that systems with FreeCAD installed will not show that preview thumbnail for the file if they have their file explorer set to pictogram mode. I think this is not an issue, as they can look at the README or at preview.jpg anyway.
 
-[^2]: The actual filesize seems a bit inconsistent between recomputes. I imagine
-the XML is a less efficient way to save the information, so you probably save
-a bit of repo size in practice.
+[^2]: The actual filesize seems a bit inconsistent between recomputes. I imagine the XML is a less efficient way to save the information, so you probably save a bit of repo size in practice.
 
-[^3]: It may still do pretty well if it can match long strings like URLs or
-long descriptions between the XML and CSV. Maybe I will run a test sometime
-in the future.
+[^3]: It may still do pretty well if it can match long strings like URLs or long descriptions between the XML and CSV. Maybe I will run a test sometime in the future.
