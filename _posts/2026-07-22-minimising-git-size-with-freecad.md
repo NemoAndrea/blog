@@ -3,8 +3,6 @@ layout: post
 title: Minimising the size of FreeCAD git repos 
 ---
 
-## Background
-
 Whether you are developing quick personal hardware designs, or working on a proper Open Hardware project, it is imperative that you use some kind of versioning system. This  will in the first place serve your own effort, as you can roll back to and keep track of important functional versions, but it also allows others to potentially collaborate or explore different ideas. 
 
 While Git is not really designed for binary files such as FreeCAD's save files, it can certainly deal with them. Using delta compression that is built-in to Git, it can actually do a pretty good job of minimising the repository size when the changes between binary files are not too large. The limitations of Git when handling large binary files still apply, but most CAD projects are not likely to use gigabytes of data for the design files -- especially if only _source_ files are committed.

@@ -3,8 +3,6 @@ layout: post
 title: Pre-commit hooks for FreeCAD
 ---
 
-# Extracting key information from FreeCAD files for repositories
-
 With the release of FreeCAD 1.1 and upcoming increased pace of releases, it is
 a good time to use FreeCAD for Open Hardware (and personal) projects. One thing
 that I have struggled with in my personal projects was keeping the preview images
